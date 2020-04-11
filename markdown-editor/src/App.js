@@ -5,6 +5,10 @@ import MarkdownView from 'react-showdown';
 const App = () => {
   const [mdContent, setValue] = useState("# Type your markdown");
 
+  const updateEditor = (editor, data, mdContent) => {
+    setValue(mdContent);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,7 +26,7 @@ const App = () => {
                 theme: "default",
                 lineNumbers: true
               }}
-              onChange={(editor, data, mdContent) => {setValue(mdContent)}}
+              onChange={(editor, data, mdContent) => {updateEditor(editor, data, mdContent)}}
             />
           </div>
 
