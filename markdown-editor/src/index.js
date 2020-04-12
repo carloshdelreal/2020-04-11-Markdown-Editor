@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
 import 'codemirror/mode/markdown/markdown.js';
+import 'codemirror/mode/javascript/javascript.js';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
