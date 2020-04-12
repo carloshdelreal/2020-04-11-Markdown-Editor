@@ -3,7 +3,9 @@ import {UnControlled as CodeMirror} from 'react-codemirror2'
 import MarkdownView from 'react-showdown';
 
 const App = () => {
-  const [mdContent, setValue] = useState("# Type your markdown");
+  const [mdContent, setValue] = useState(
+    `# type your markdown\nthis is **Markdown**\nthis is *italics*\n> this is a quote\n- [x] tasklist`
+  );
 
   const updateEditor = (editor, data, mdContent) => {
     setValue(mdContent);
@@ -20,8 +22,7 @@ const App = () => {
         <div className="row">
           <div className="col-6">
             <CodeMirror
-              mode={"markdown"}
-              value={"# type your markdown"}
+              value={`# type your markdown\nthis is **Markdown**\nthis is *italics*\n> this is a quote\n- [x] tasklist`}
               options={{
                 mode: 'markdown',
                 theme: "default",
@@ -32,7 +33,10 @@ const App = () => {
           </div>
 
           <div className="col-6">
-            <MarkdownView markdown={mdContent} />
+            <MarkdownView
+              markdown={mdContent}
+              flavor={"github"}
+            />
           </div>
 
         </div>
