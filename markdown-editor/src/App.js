@@ -18,12 +18,12 @@ const App = () => {
       </header>
       <div className="container">
         <div className="row">
-
           <div className="col-6">
             <CodeMirror
-              value={"#type your markdown"}
+              mode={"markdown"}
+              value={"# type your markdown"}
               options={{
-                mode: 'xml',
+                mode: 'markdown',
                 theme: "default",
                 lineNumbers: true
               }}
