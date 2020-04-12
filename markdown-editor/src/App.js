@@ -9,6 +9,7 @@ const App = () => {
     setValue(mdContent);
   }
 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +21,7 @@ const App = () => {
 
           <div className="col-6">
             <CodeMirror
-              value={mdContent}
+              value={"#type your markdown"}
               options={{
                 mode: 'xml',
                 theme: "default",
